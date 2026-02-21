@@ -13,7 +13,7 @@
 
   "web_accessible_resources": [
     {
-      "resources": ["excludes.txt"],
+      "resources": ["keywords.txt"],
       "matches": ["https://coventry.aula.education/*"]
     }
   ]
