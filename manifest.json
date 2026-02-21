@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Notification Keyword Filter",
+  "version": "0.2",
+  "description": "Removes notifications containing specific keywords",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://coventry.aula.education/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
