@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Notification Keyword Filter",
+  "name": "Aula Ad Filter",
   "version": "1.0",
   "description": "Removes all the notifications about rooms for rent on Aula",
   "permissions": [],
