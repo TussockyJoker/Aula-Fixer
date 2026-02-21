@@ -1,6 +1,25 @@
-const keywords = ["tenancy", "bedroom available", "spacious room", "room available cv13GX queens park house unite student"];
+let keywords = [];
 
-// Function to check and remove matching notifications
+// Load excludes.txt first
+async function loadKeywords() {
+  try {
+    const response = await fetch(chrome.runtime.getURL("excludes.txt"));
+    const text = await response.text();
+
+    keywords = text
+      .split("\n")
+      .map(k => k.trim().toLowerCase())
+      .filter(Boolean);
+
+    console.log("Loaded keywords:", keywords);
+
+    startFiltering(); // start only after keywords are ready
+
+  } catch (error) {
+    console.error("Failed to load excludes.txt:", error);
+  }
+}
+
 function filterNotifications() {
   const notifications = document.querySelectorAll('div[role="button"]');
 
@@ -17,15 +36,20 @@ function filterNotifications() {
   });
 }
 
-// Run once on load
-filterNotifications();
-
-// Watch for dynamically loaded notifications
-const observer = new MutationObserver(() => {
+function startFiltering() {
+  // Run once
   filterNotifications();
-});
 
-observer.observe(document.body, {
-  childList: true,
-  subtree: true
-});
+  // Watch for dynamically loaded notifications
+  const observer = new MutationObserver(() => {
+    filterNotifications();
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+}
+
+// Start everything
+loadKeywords();
