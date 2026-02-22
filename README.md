@@ -9,3 +9,5 @@ I've only tested with Chrome, Brave and Firefox. The easiest way to install this
 For firefox I've built an xpi which is signed (surprisingly difficult), just open a new firefox tab and drag it into the window.
 
 I'm working on getting the extension published on the chrome and firefox stores.
+
+The keyphrases cannot be edited if you're using the prepacked .xpi file. Possibly an oversight and I may fix this at some point
