@@ -16,5 +16,15 @@
       "resources": ["keywords.txt"],
       "matches": ["https://coventry.aula.education/*"]
     }
-  ]
+  ],
+
+  "browser_specific_settings": {
+  "gecko": {
+    "id": "aulaadremoverpublic@tussockyjoker.com",
+    "data_collection_permissions": {
+      "required": ["none"],
+      "optional": []
+  }
+  }
+}
 }
