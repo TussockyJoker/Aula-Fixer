@@ -1,4 +1,4 @@
-# Aula-Extension
+# Aula-Fixer
 
 Browser extension that removes all the notifications about rooms for rent and tenancy takeovers from Aula and also changes the styling of the pages to stop wasting so much space.
 
