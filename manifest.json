@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Aula Fixer",
   "version": "1.0",
-  "description": "Based on my Aula ad remover project, Removes all the notifications about rooms for rent on Aula and changes the styling so that it doesn't waste so much screen space.",
+  "description": "Removes all notifications about rooms for rent etc. on Aula and changes styling so that less screen space is wasted.",
 
   "content_scripts": [
     {
