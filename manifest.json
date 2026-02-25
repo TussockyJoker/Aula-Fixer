@@ -5,7 +5,8 @@
   "description": "Removes all notifications about rooms for rent etc. on Aula and changes styling so that less screen space is wasted.",
 
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
   },
 
   "content_scripts": [
