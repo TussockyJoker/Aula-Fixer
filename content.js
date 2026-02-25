@@ -1,11 +1,13 @@
 let keywords = [];
 
-async function loadKeywords() {
-    try {
-        const response = await fetch(chrome.runtime.getURL("keywords.txt"));
-        const text = await response.text();
+function loadKeywords() {
+    chrome.runtime.sendMessage({ type: "GET_KEYWORDS" }, (response) => {
+        if (!response || !response.success) {
+            console.error("Failed to load remote keywords:", response?.error);
+            return;
+        }
 
-        keywords = text
+        keywords = response.data
             .split("\n")
             .map(k => k.trim().toLowerCase())
             .filter(Boolean);
@@ -14,10 +16,7 @@ async function loadKeywords() {
 
         injectStyles();
         startFiltering();
-
-    } catch (error) {
-        console.error("Failed to load keywords.txt:", error);
-    }
+    });
 }
 
 function filterNotifications() {
@@ -37,13 +36,16 @@ function filterNotifications() {
 }
 
 function injectStyles() {
+    // Prevent duplicate injection
+    if (document.getElementById("aula-fixer-styles")) return;
+
     const style = document.createElement("style");
+    style.id = "aula-fixer-styles";
 
     style.textContent = `
         .css-qbgecn {
             max-height: 99% !important;
             padding: 0 !important;
-
         }
         
         .css-15ampbt {
@@ -64,8 +66,7 @@ function injectStyles() {
         }
 
         .css-nivjaw {
-            padding: 12px 12px 12px 12px;
-        
+            padding: 12px 12px 12px 12px !important;
         }
     `;
 
