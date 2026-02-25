@@ -12,7 +12,7 @@ async function loadKeywords() {
 
         console.log("Loaded keywords:", keywords);
 
-        injectStyles();   // 👈 Add this
+        injectStyles();
         startFiltering();
 
     } catch (error) {
