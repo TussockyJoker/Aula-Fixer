@@ -20,7 +20,7 @@
 
   "browser_specific_settings": {
   "gecko": {
-    "id": "aulafixer@tussockyjoker.com",
+    "id": "aula-fixer@tussockyjoker.com",
     "data_collection_permissions": {
       "required": ["none"],
       "optional": []
