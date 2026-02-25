@@ -10,6 +10,7 @@ For firefox I've built an xpi which is signed (surprisingly difficult), just ope
 
 I'm working on getting the extension published on the chrome and firefox stores.
 https://addons.mozilla.org/en-GB/firefox/addon/aula-ad-filter/
+
 https://chromewebstore.google.com/detail/aula-ad-filter/ooghijbicaoiccbkjplnellggncbcgbl?authuser=0&hl=en-GB
 
 If you just want the 'ad-blocker' function, I've kept a separate branch in this repo.
