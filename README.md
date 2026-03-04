@@ -1,6 +1,6 @@
 # Aula-Fixer
 
-This is a browser extension that removes all the notifications about rooms for rent and tenancy takeovers etc. from Aula and changes the styling of the pages to stop wasting so much space.
+This is a browser extension that removes all the notifications about rooms for rent and tenancy takeovers etc. from Aula (aula.education) and changes the styling of the pages to stop wasting so much space.
 
 Will remove any notifications containing the any of the ~keywords~ keyphrases in the keywords.txt file stored in this repo, it can also fall back on a local keywords.txt if the server cannot be reached.
 
