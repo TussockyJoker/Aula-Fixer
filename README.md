@@ -10,11 +10,11 @@ For Firefox, I've made a signed .xpi which can be found in builds. To install fr
 
 The Firefox version will often be slightly more up-to-date compared to the chrome version as building for chrome cannot be done from the CLI (afaik).
 
-I'm working on getting the extension published on both the Chrome and Firefox stores.
+You can get this extension on both the Chrome and Firefox stores now!
 
-https://addons.mozilla.org/en-GB/firefox/addon/aula-ad-filter/
+https://addons.mozilla.org/en-GB/firefox/addon/aula-fixer/
 
-https://chromewebstore.google.com/detail/aula-ad-filter/ooghijbicaoiccbkjplnellggncbcgbl?authuser=0&hl=en-GB
+https://chromewebstore.google.com/detail/aula-fixer/ooghijbicaoiccbkjplnellggncbcgbl?hl=en-GB
 
 If you just want the 'ad-blocker' function, I've kept a separate branch in this repo.
 If you have customised keywords.txt, you will have to break the url in 'background.js' so that it falls back on the local keywords.txt file. This only works if you are NOT using the prepackaged extensions or extensions from the chrome/firefox stores, these will only pull from the file in this repo or fall back on the included version if the server cannot be reached. If you think a word or phrase should be added to keywords.txt, either submit a pull request or raise an issue.
