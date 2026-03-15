@@ -71,6 +71,10 @@ function injectStyles() {
             max-height: calc(-102px + 100vh) !important;
         }
         
+        .css-iex1ax {
+            height: 95% !important
+        }
+
         .css-15ampbt {
             overflow: hidden !important;
         }
