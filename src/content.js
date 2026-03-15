@@ -35,6 +35,29 @@ function filterNotifications() {
     });
 }
 
+function removeTrailingEmptyParagraphs() {
+    const editors = document.querySelectorAll('[data-slate-editor="true"]');
+
+    editors.forEach(editor => {
+        const paragraphs = editor.querySelectorAll('p[data-slate-node="element"]');
+
+        // Walk backwards and remove trailing empty ones
+        let i = paragraphs.length - 1;
+        while (i >= 0) {
+            const p = paragraphs[i];
+            const zeroWidthSpan = p.querySelector('[data-slate-zero-width]');
+            const hasOnlyZeroWidth = zeroWidthSpan && p.innerText.trim() === "";
+
+            if (hasOnlyZeroWidth) {
+                p.style.display = "none";
+                i--;
+            } else {
+                break;
+            }
+        }
+    });
+}
+
 function injectStyles() {
     // Prevent duplicate injection
     if (document.getElementById("aula-fixer-styles")) return;
@@ -44,8 +67,8 @@ function injectStyles() {
 
     style.textContent = `
         .css-qbgecn {
-            max-height: 99% !important;
             padding: 0 !important;
+            max-height: calc(-102px + 100vh) !important;
         }
         
         .css-15ampbt {
@@ -56,9 +79,7 @@ function injectStyles() {
             margin: 1px !important;
         }
 
-        #main-content > div > div > div.css-qbgecn.e1f8gytw1 {
-            overflow-y: hidden !important;
-        }
+        .
 
         .css-1vz9kb2 {
             flex-basis: 85% !important;
@@ -75,9 +96,11 @@ function injectStyles() {
 
 function startFiltering() {
     filterNotifications();
+    removeTrailingEmptyParagraphs();
 
     const observer = new MutationObserver(() => {
         filterNotifications();
+        removeTrailingEmptyParagraphs();
     });
 
     observer.observe(document.body, {
