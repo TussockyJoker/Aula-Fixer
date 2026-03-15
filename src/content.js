@@ -75,6 +75,10 @@ function injectStyles() {
             height: 95% !important
         }
 
+        .css-1r0ebcd {
+            height: 99% !important
+        }
+
         .css-15ampbt {
             overflow: hidden !important;
         }
@@ -83,7 +87,10 @@ function injectStyles() {
             margin: 1px !important;
         }
 
-        .
+        @media screen and (min-width: 900px) {
+            .css-1vz9kb2 {
+            flex-basis: 100%
+            }
 
         .css-1vz9kb2 {
             flex-basis: 85% !important;
