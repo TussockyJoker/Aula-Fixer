@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === "GET_KEYWORDS") {
 
-        const remoteUrl = "https://git.wbell.dev/TussockyJoker/Aula-Fixer/raw/branch/main/src/keywords.txt";
+        const remoteUrl = "https://raw.githubusercontent.com/TussockyJoker/Aula-Fixer/refs/heads/main/src/keywords.txt";
         const localUrl = chrome.runtime.getURL("keywords.txt");
 
         // remote
