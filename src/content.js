@@ -81,6 +81,11 @@ function injectStyles() {
             padding-left: 9px !important;
             padding-right: 9px !important;
         }
+        
+        .pdfobject {
+            height: 60vh !important;
+            min-height: 440px !important
+        }
 
         .css-1njvcqf {
             padding: 0px 0px 0px 0px !important;
