@@ -1,5 +1,16 @@
 let keywords = [];
 
+function removeMarkCompleteButton() {
+    document
+        .querySelectorAll('[data-testid="mark-as-complete-icon"]')
+        .forEach(icon => {
+            const button = icon.closest("button");
+            if (button) {
+                button.remove();
+            }
+        });
+}
+
 function loadKeywords() {
     chrome.runtime.sendMessage({ type: "GET_KEYWORDS" }, (response) => {
         if (!response || !response.success) {
@@ -124,10 +135,12 @@ function injectStyles() {
 function startFiltering() {
     filterNotifications();
     removeTrailingEmptyParagraphs();
+    removeMarkCompleteButton();
 
     const observer = new MutationObserver(() => {
         filterNotifications();
         removeTrailingEmptyParagraphs();
+        removeMarkCompleteButton();
     });
 
     observer.observe(document.body, {
