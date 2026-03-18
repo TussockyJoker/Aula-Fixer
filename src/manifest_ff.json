@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Aula Fixer",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Removes all notifications about rooms for rent etc. on Aula and changes styling so that less screen space is wasted.",
 
   "background": {
@@ -16,7 +16,7 @@
   ],
 
   "host_permissions": [
-    "https://git.wbell.dev/*"
+    "https://raw.githubusercontent.com/TussockyJoker/Aula-Fixer/*"
   ],
 
   "web_accessible_resources": [
