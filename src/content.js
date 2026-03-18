@@ -91,6 +91,10 @@ function injectStyles() {
             width: 75vh !important
         }
 
+        .plyr__video-wrapper {
+            width: auto; !important;
+        }
+
         .css-12gi33l {
             padding-top: 0px !important;
             padding-bottom: 0px !important;
