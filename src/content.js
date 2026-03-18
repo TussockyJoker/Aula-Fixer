@@ -75,6 +75,17 @@ function injectStyles() {
             height: 95% !important
         }
 
+        .css-12gi33l {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+            padding-left: 9px !important;
+            padding-right: 9px !important;
+        }
+
+        .css-1njvcqf {
+            padding: 0px 0px 0px 0px !important;
+        }
+
         .css-1r0ebcd {
             height: 99% !important
         }
