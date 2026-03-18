@@ -86,6 +86,11 @@ function injectStyles() {
             height: 95% !important
         }
 
+        /* reduces video player width */
+        .plyr video {
+            width: 75vh !important
+        }
+
         .css-12gi33l {
             padding-top: 0px !important;
             padding-bottom: 0px !important;
@@ -93,6 +98,7 @@ function injectStyles() {
             padding-right: 9px !important;
         }
         
+        /* adjusts formatting of pdf previewers in aula */
         .pdfobject {
             height: 60vh !important;
             min-height: 440px !important
@@ -126,6 +132,13 @@ function injectStyles() {
 
         .css-nivjaw {
             padding: 12px 12px 12px 12px !important;
+        }
+
+        .css-3rnrqu-focusOutline {
+            box-sizing: border-box;
+            position: relative;
+            padding-top: 1px;
+            height: 100%;
         }
     `;
 
