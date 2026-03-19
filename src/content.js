@@ -91,8 +91,19 @@ function injectStyles() {
             width: 75vh !important
         }
 
+        /* removes black bars around video */
+        .css-vrzzm8 {
+            width: 75vh !important;
+        }
+
         .plyr__video-wrapper {
             width: auto; !important;
+        }
+
+        /* reduces max height of images from 1200px to 120px, will need to review this or make it adjustable as i can imagine it breaks certain pages*/
+
+        .css-1uv2qow {
+            max-height: 120px !important;
         }
 
         .css-12gi33l {
