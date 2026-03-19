@@ -83,7 +83,7 @@ function injectStyles() {
         }
         
         .css-iex1ax {
-            height: 95% !important
+            padding-bottom: 1px !important;
         }
 
         /* reduces video player width */
@@ -146,7 +146,7 @@ function injectStyles() {
         }
 
         .css-nivjaw {
-            padding: 12px 12px 12px 12px !important;
+            padding: 12px 12px 3px 12px !important;
         }
 
         .css-3rnrqu-focusOutline {
