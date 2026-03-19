@@ -146,7 +146,7 @@ function injectStyles() {
         }
 
         .css-nivjaw {
-            padding: 12px 12px 3px 12px !important;
+            padding: 12px 12px 6px 12px !important;
         }
 
         .css-3rnrqu-focusOutline {
