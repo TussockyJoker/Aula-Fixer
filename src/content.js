@@ -11,6 +11,16 @@ function removeMarkCompleteButton() {
         });
 }
 
+function removeElementByText(text) {
+  const buttons = document.querySelectorAll('button');
+  for (const btn of buttons) {
+    if (btn.textContent.trim() === text) {
+      btn.remove();
+      break;
+    }
+  }
+}
+
 function loadKeywords() {
     chrome.runtime.sendMessage({ type: "GET_KEYWORDS" }, (response) => {
         if (!response || !response.success) {
@@ -88,12 +98,12 @@ function injectStyles() {
 
         /* reduces video player width */
         .plyr video {
-            width: 75vh !important
+            max-width: 75vh !important
         }
 
         /* removes black bars around video */
         .css-vrzzm8 {
-            width: 75vh !important;
+            max-width: 75vh !important;
         }
 
         .plyr__video-wrapper {
@@ -103,7 +113,7 @@ function injectStyles() {
         /* reduces max height of images from 1200px to 120px, will need to review this or make it adjustable as i can imagine it breaks certain pages*/
 
         .css-1uv2qow {
-            max-height: 120px !important;
+            max-height: 240px !important;
         }
 
         .css-12gi33l {
@@ -146,7 +156,7 @@ function injectStyles() {
         }
 
         .css-nivjaw {
-            padding: 12px 12px 6px 12px !important;
+            padding: 9px 12px 6px 12px !important;
         }
 
         .css-3rnrqu-focusOutline {
@@ -154,6 +164,15 @@ function injectStyles() {
             position: relative;
             padding-top: 1px;
             height: 100%;
+        }
+        
+        /* removes padding at bottom of sidebar */
+        .css-1x4o4rg {
+            padding-bottom: 0px !important;
+        }
+
+        .css-48tzk0 {
+            margin: 0px !important
         }
     `;
 
@@ -164,11 +183,13 @@ function startFiltering() {
     filterNotifications();
     removeTrailingEmptyParagraphs();
     removeMarkCompleteButton();
+    removeElementByText('View progress overview');
 
     const observer = new MutationObserver(() => {
         filterNotifications();
         removeTrailingEmptyParagraphs();
         removeMarkCompleteButton();
+        removeElementByText('View progress overview');
     });
 
     observer.observe(document.body, {
