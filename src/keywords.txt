@@ -56,3 +56,7 @@ Single room available for immediate takeover
 looking for 2 students to take over my accommodation
 A sharing room is available for one boy
 A sharing room is available for two boys
+A sharing room is immediately available for
+A shared studio room is available for
+Studio is available for
+Looking for a room takeover
