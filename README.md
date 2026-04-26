@@ -7,7 +7,7 @@ Firefox Addons: https://addons.mozilla.org/en-GB/firefox/addon/aula-fixer/
 
 The extension will remove any notifications containing the any of the keyphrases in the keywords.txt file stored in ~this~ the github mirror of this repo, it will fall back on an included list of keywords if the server cannot be reached.
 
-This extension has only been tested with Chrome, Brave, Firefox and Edge. The easiest way to install this on a chromium based browser is to get it from the Chrome Web Store. Alternatively, you can download and extract the .zip file (or clone the repo) load into Chrome as an unpacked extension. I did pack a .crx for this purpose but Chrome has removed the ability to load .crx files 😐
+This extension has only been tested with Chrome, Brave, Firefox and Edge. The easiest way to install this on a chromium based browser is to get it from the Chrome Web Store. Alternatively, you can download and extract the .zip file (or clone the repo) and then load it into Chrome as an unpacked extension. I did pack a .crx for this purpose but Chrome has removed the ability to load .crx files 😐
 
 For Firefox, again, the easiest way is to follow the link to Firefox Addons and install it from there, however I've made an xpi file which can be found in builds. To install this .xpi, just open a new firefox tab and drag it into the window.
 
