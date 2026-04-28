@@ -58,6 +58,7 @@ A sharing room is available for one boy
 A sharing room is available for two boys
 A sharing room is immediately available for
 A shared studio room is available for
+A shared accomodation is available
 Studio is available for
 Looking for a room takeover
 A comfortable and affordable student room is available
